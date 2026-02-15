@@ -25,9 +25,13 @@ _sel: sup: {
           primitive = sup.haskell.lib.doJailbreak super.primitive;
           call-stack = sup.haskell.lib.dontCheck super.call-stack;
           doctest = sup.haskell.lib.doJailbreak (sup.haskell.lib.dontCheck super.doctest);
-          hashable = sup.haskell.lib.doJailbreak (super.hashable.overrideScope(_sel: _sup: {
-            os-string = null;
-          }));
+          hashable = sup.haskell.lib.doJailbreak (
+            super.hashable.overrideScope (
+              _sel: _sup: {
+                os-string = null;
+              }
+            )
+          );
           ChasingBottoms = sup.haskell.lib.doJailbreak super.ChasingBottoms;
           # th-abstraction = super.th-abstraction_0_7_1_0;
           nothunks = sup.haskell.lib.doJailbreak super.nothunks;

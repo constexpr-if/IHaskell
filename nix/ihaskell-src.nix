@@ -1,4 +1,5 @@
-{ nix-filter
+{
+  nix-filter,
 }:
 
 nix-filter {
