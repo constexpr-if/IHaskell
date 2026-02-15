@@ -105,6 +105,7 @@ buildEnv {
   passthru = {
     inherit haskellPackages;
     inherit ihaskellOverlay;
+    inherit ihaskellDataDir;
     # statically linking against haskell libs reduces closure size at the expense
     # of startup/reload time, so we make it configurable
     ihaskellExe =
